@@ -67,4 +67,10 @@ public class Client {
     public void setCommandes(List<Commande> commandes) {
         this.commandes = commandes;
     }
+
+    @Override
+    public String toString() {
+        return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", telephone="
+                + telephone + "]";
+    }
 }
