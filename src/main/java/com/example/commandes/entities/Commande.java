@@ -1,7 +1,6 @@
 package com.example.commandes.entities;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
@@ -9,9 +8,18 @@ public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDate dateCommande;
     private Double montantTotal;
+
+    public Commande() {
+        super();
+    }
+
+    public Commande(LocalDate dateCommande, Double montantTotal) {
+        super();
+        this.dateCommande = dateCommande;
+        this.montantTotal = montantTotal;
+    }
 
     @ManyToOne
     @JoinColumn(name = "client_id")
