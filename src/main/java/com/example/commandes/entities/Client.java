@@ -1,6 +1,9 @@
 package com.example.commandes.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -14,7 +17,20 @@ public class Client {
     private String email;
     private String telephone;
 
+    public Client() {
+        super();
+    }
+
+    public Client(String nom, String prenom, String email, String telephone) {
+        super();
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.telephone = telephone;
+    }
+
     @OneToMany(mappedBy = "client")
+    @JsonIgnore
     private List<Commande> commandes;
 
     // Getters and setters

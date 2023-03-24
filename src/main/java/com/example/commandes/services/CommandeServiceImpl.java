@@ -1,8 +1,8 @@
 package com.example.commandes.services;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import com.example.commandes.entities.Commande;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.example.commandes.repository.CommandeRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +11,16 @@ public class CommandeServiceImpl implements CommandeService {
     @Autowired
     CommandeRepository commandeRepository;
     @Override
-    public Commande saveCommande(Commande p) {
-        return commandeRepository.save(p);
+    public Commande saveCommande(Commande c) {
+        return commandeRepository.save(c);
     }
     @Override
-    public Commande updateCommande(Commande p) {
-        return commandeRepository.save(p);
+    public Commande updateCommande(Commande c) {
+        return commandeRepository.save(c);
     }
     @Override
-    public void deleteCommande(Commande p) {
-        commandeRepository.delete(p);
+    public void deleteCommande(Commande c) {
+        commandeRepository.delete(c);
     }
     @Override
     public void deleteCommandeById(Long id) {

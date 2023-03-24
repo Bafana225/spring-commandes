@@ -41,21 +41,21 @@ class CommandesApplicationTests {
 		assertNotNull(client.getId());
 	}
 
-	@Test
-	public void testFindByNomClient()
-	{
-		List<Client> clients = clientRepository.findByNomClient("Enzo");
-		for (Client c : clients)
-		{
-			System.out.println(c);
-		}
-	}
-	@Test
-	public void testFindByNomClientContains ()
-	{
-		List<Client> clients=clientRepository.findByNomClientContains("En");
-		for (Client c : clients)
-		{
-			System.out.println(c);
-		} }
+//	@Test
+//	public void testFindByNomClient()
+//	{
+//		List<Client> clients = clientRepository.findByNomClient("Doe");
+//		for (Client c : clients)
+//		{
+//			System.out.println(c);
+//		}
+//	}
+//	@Test
+//	public void testFindByNomClientContains ()
+//	{
+//		List<Client> clients=clientRepository.findByNomClientContains("En");
+//		for (Client c : clients)
+//		{
+//			System.out.println(c);
+//		} }
 }

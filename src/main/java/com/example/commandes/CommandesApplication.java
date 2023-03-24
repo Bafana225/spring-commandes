@@ -11,3 +11,5 @@ public class CommandesApplication {
 	}
 
 }
+
+// {"id":1,"dateCommande":"2023-03-24","montantTotal":2200.5,"client":null}
