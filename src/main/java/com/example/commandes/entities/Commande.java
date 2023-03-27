@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idCommande;
     private LocalDate dateCommande;
     private Double montantTotal;
 
@@ -15,9 +15,9 @@ public class Commande {
         super();
     }
 
-    public Commande(long id, LocalDate dateCommande, Double montantTotal) {
+    public Commande(long idCommande, LocalDate dateCommande, Double montantTotal) {
         super();
-        this.id = id;
+        this.idCommande = idCommande;
         this.dateCommande = dateCommande;
         this.montantTotal = montantTotal;
     }
@@ -28,12 +28,12 @@ public class Commande {
 
     // Getters and setters
 
-    public Long getId() {
-        return id;
+    public Long getIdCommande() {
+        return idCommande;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdCommande(Long id) {
+        this.idCommande = id;
     }
 
     public LocalDate getDateCommande() {
@@ -62,6 +62,6 @@ public class Commande {
 
     @Override
     public String toString() {
-        return "Commande [id=" + id + ", dateCommande=" + dateCommande + ", montantTotal=" + montantTotal + "]";
+        return "Commande [id=" + idCommande + ", dateCommande=" + dateCommande + ", montantTotal=" + montantTotal + "]";
     }
 }
