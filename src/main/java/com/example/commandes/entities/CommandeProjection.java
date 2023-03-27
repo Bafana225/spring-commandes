@@ -5,6 +5,6 @@ import java.time.LocalDate;
 
 @Projection(name = "montantTotal", types = { Commande.class })
 public interface CommandeProjection {
-    public Double getMontantTotal();
-    public LocalDate getDateCommande();
+//    public Double getMontantTotal();
+//    public LocalDate getDateCommande();
 }

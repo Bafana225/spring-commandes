@@ -25,7 +25,7 @@ class CommandesApplicationTests {
 
 	@Test
 	public void testCreateCommande() {
-		Commande cmd = new Commande(LocalDate.now(), 2200.500);
+		Commande cmd = new Commande(1, LocalDate.now(), 2200.500);
 		commandeRepository.save(cmd);
 		assertNotNull(cmd.getId());
 	}

@@ -15,8 +15,9 @@ public class Commande {
         super();
     }
 
-    public Commande(LocalDate dateCommande, Double montantTotal) {
+    public Commande(long id, LocalDate dateCommande, Double montantTotal) {
         super();
+        this.id = id;
         this.dateCommande = dateCommande;
         this.montantTotal = montantTotal;
     }
