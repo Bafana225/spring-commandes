@@ -7,8 +7,11 @@ import java.time.LocalDate;
 public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
+    @Column
     private LocalDate dateCommande;
+    @Column
     private Double montantTotal;
 
     public Commande() {
