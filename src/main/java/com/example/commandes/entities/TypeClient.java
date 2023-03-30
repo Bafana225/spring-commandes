@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-public class Type {
+public class TypeClient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
