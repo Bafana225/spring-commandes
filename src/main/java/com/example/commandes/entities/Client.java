@@ -75,6 +75,10 @@ public class Client {
         return commandes;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "id_type_client")
+    private TypeClient typeClient;
+
     public void setCommandes(List<Commande> commandes) {
         this.commandes = commandes;
     }

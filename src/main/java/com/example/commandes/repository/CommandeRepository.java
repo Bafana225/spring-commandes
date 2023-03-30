@@ -9,8 +9,8 @@ import java.util.Optional;
 
 @RepositoryRestResource(path = "rest")
 public interface CommandeRepository extends JpaRepository<Commande, Long> {
-    void deleteCommandeById(Long id);
+    Commande findCommandeById(Long id);
 
-    Optional<Commande> findCommandeById(Long id);
+    void deleteCommandeById(Long id);
 
 }

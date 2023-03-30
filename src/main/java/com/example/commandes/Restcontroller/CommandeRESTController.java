@@ -31,7 +31,7 @@ public class CommandeRESTController {
         return commandeService.getCommande(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value="/add", method = RequestMethod.POST)
     public Commande createCommande(@RequestBody Commande commande) {
         return commandeService.saveCommande(commande);
     }
@@ -41,7 +41,7 @@ public class CommandeRESTController {
         return commandeService.updateCommande(commande);
     }
 
-    @RequestMapping(value="/{id}/client", method = RequestMethod.GET)
+    @RequestMapping(value="/client/{id}", method = RequestMethod.GET)
     public Long getClientIdByCommandeId(@PathVariable("id") Long id) {
         Commande commande = commandeService.getCommande(id);
         Client client = commande.getClient();
