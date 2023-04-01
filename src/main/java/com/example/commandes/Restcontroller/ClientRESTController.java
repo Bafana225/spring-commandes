@@ -51,11 +51,13 @@ public class ClientRESTController {
         return client.getCommandes();
     }
 
-    @RequestMapping(value="/add-command/{client_id}/{commande_id}",method = RequestMethod.PUT)
-    public ResponseEntity<Client> addCommandeClient(@PathVariable Long client_id, @PathVariable Long commande_id){
-        Client newClient = clientServiceImpl.addCommande(client_id, commande_id);
-        return new ResponseEntity<>(newClient, HttpStatus.OK);
+    @RequestMapping(value="/add-command/{client_id}/{commande_id}", method=RequestMethod.PUT)
+    public ResponseEntity<List<Commande>> addCommandeClient(@PathVariable Long client_id, @PathVariable Long commande_id) {
+        Client client = clientServiceImpl.addCommande(client_id, commande_id);
+        List<Commande> commandes = client.getCommandes();
+        return ResponseEntity.ok(commandes);
     }
+
 
     @RequestMapping(value="/remove-command/{client_id}/{commande_id}",method = RequestMethod.DELETE)
     public ResponseEntity<Client> removeCommandeClient(@PathVariable Long client_id, @PathVariable Long commande_id){
